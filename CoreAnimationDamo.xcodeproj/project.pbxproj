@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5919F9B41E2752FA00F248DB /* KeyframeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5919F9B31E2752FA00F248DB /* KeyframeViewController.m */; };
+		5919F9B81E27560C00F248DB /* timg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5919F9B71E27560C00F248DB /* timg.png */; };
 		593BFCCB1E266CCB008E2DAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 593BFCCA1E266CCB008E2DAB /* main.m */; };
 		593BFCCE1E266CCB008E2DAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 593BFCCD1E266CCB008E2DAB /* AppDelegate.m */; };
 		593BFCD11E266CCB008E2DAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593BFCD01E266CCB008E2DAB /* ViewController.m */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5919F9B21E2752FA00F248DB /* KeyframeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyframeViewController.h; sourceTree = "<group>"; };
+		5919F9B31E2752FA00F248DB /* KeyframeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyframeViewController.m; sourceTree = "<group>"; };
+		5919F9B71E27560C00F248DB /* timg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timg.png; sourceTree = "<group>"; };
 		593BFCC61E266CCB008E2DAB /* CoreAnimationDamo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationDamo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		593BFCCA1E266CCB008E2DAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		593BFCCC1E266CCB008E2DAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5919F9B11E2752CC00F248DB /*  CAKeyframeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				5919F9B21E2752FA00F248DB /* KeyframeViewController.h */,
+				5919F9B31E2752FA00F248DB /* KeyframeViewController.m */,
+			);
+			name = " CAKeyframeAnimation";
+			sourceTree = "<group>";
+		};
 		593BFCBD1E266CCB008E2DAB = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +131,7 @@
 				593BFCCD1E266CCB008E2DAB /* AppDelegate.m */,
 				593BFCCF1E266CCB008E2DAB /* ViewController.h */,
 				593BFCD01E266CCB008E2DAB /* ViewController.m */,
+				5919F9B11E2752CC00F248DB /*  CAKeyframeAnimation */,
 				593BFCFC1E266CF5008E2DAB /* CABasicAnimation */,
 				593BFCC91E266CCB008E2DAB /* Supporting Files */,
 			);
@@ -130,6 +145,7 @@
 				593BFCD51E266CCB008E2DAB /* Assets.xcassets */,
 				593BFCD71E266CCB008E2DAB /* LaunchScreen.storyboard */,
 				593BFCDA1E266CCB008E2DAB /* Info.plist */,
+				5919F9B71E27560C00F248DB /* timg.png */,
 				593BFCCA1E266CCB008E2DAB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -300,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				593BFCD91E266CCB008E2DAB /* LaunchScreen.storyboard in Resources */,
+				5919F9B81E27560C00F248DB /* timg.png in Resources */,
 				593BFCD61E266CCB008E2DAB /* Assets.xcassets in Resources */,
 				593BFCD41E266CCB008E2DAB /* Main.storyboard in Resources */,
 			);
@@ -332,6 +349,7 @@
 				593BFD031E268446008E2DAB /* PositionViewController.m in Sources */,
 				593BFCFF1E267A95008E2DAB /* BasicAnimationViewController.m in Sources */,
 				593BFCCB1E266CCB008E2DAB /* main.m in Sources */,
+				5919F9B41E2752FA00F248DB /* KeyframeViewController.m in Sources */,
 				593BFD0B1E2698EB008E2DAB /* PauseAndStartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +582,7 @@
 				593BFCF51E266CCB008E2DAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		593BFCF61E266CCB008E2DAB /* Build configuration list for PBXNativeTarget "CoreAnimationDamoTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +591,7 @@
 				593BFCF81E266CCB008E2DAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		593BFCF91E266CCB008E2DAB /* Build configuration list for PBXNativeTarget "CoreAnimationDamoUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +600,7 @@
 				593BFCFB1E266CCB008E2DAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

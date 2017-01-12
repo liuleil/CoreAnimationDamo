@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,9 +51,23 @@
                                     <segue destination="Wtc-HR-RoF" kind="show" id="Sak-oB-rHD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-AB-2Xf">
+                                <rect key="frame" x="-0.5" y="318" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zTI-9g-D6R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="关键帧+组动画"/>
+                                <connections>
+                                    <segue destination="4qp-QU-PLP" kind="show" id="dEa-qa-AIa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="iB4-AB-2Xf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4gO-og-oH7"/>
+                            <constraint firstItem="iB4-AB-2Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZs-Fq-4Zh"/>
+                            <constraint firstItem="iB4-AB-2Xf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aIs-92-Whu"/>
                             <constraint firstItem="RQj-M3-VPt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hxi-HV-bkF"/>
                             <constraint firstItem="RQj-M3-VPt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="xkx-ZX-Jfy"/>
                         </constraints>
@@ -61,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="-21"/>
+            <point key="canvasLocation" x="-276" y="-52"/>
         </scene>
         <!--Basic Animation View Controller-->
         <scene sceneID="pyo-uV-7hk">
@@ -99,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhJ-Cl-ChI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="-11"/>
+            <point key="canvasLocation" x="180" y="-65"/>
         </scene>
         <!--Position View Controller-->
         <scene sceneID="F0k-3Y-cLN">
@@ -140,6 +155,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzh-ef-b8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1198" y="-11"/>
+        </scene>
+        <!--Keyframe View Controller-->
+        <scene sceneID="F17-mE-Eml">
+            <objects>
+                <viewController storyboardIdentifier="KeyframeViewController" id="4qp-QU-PLP" customClass="KeyframeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VBt-jx-3q9"/>
+                        <viewControllerLayoutGuide type="bottom" id="3zy-kD-upH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yqL-iS-cB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-Ue-uGk">
+                                <rect key="frame" x="32" y="586" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="移动"/>
+                                <connections>
+                                    <action selector="move:" destination="4qp-QU-PLP" eventType="touchUpInside" id="apJ-wh-AC6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE6-cC-8B5">
+                                <rect key="frame" x="127" y="586" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="抖动"/>
+                                <connections>
+                                    <action selector="shake:" destination="4qp-QU-PLP" eventType="touchUpInside" id="31V-wd-iEy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-bg-ztv">
+                                <rect key="frame" x="225" y="586" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="路径"/>
+                                <connections>
+                                    <action selector="path:" destination="4qp-QU-PLP" eventType="touchUpInside" id="AJ3-EC-dUp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-c9-K4v">
+                                <rect key="frame" x="313" y="586" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="组动画"/>
+                                <connections>
+                                    <action selector="group:" destination="4qp-QU-PLP" eventType="touchUpInside" id="jgc-MA-8jc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KeyframeViewController.m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-DZ-NYl">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dLs-wu-Hwj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ff-ld-Tsq">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Og2-5R-515"/>
+                                    <constraint firstAttribute="width" constant="100" id="TcY-MS-NWS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击屏幕移除动画" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejV-rj-7Di">
+                                <rect key="frame" x="-0.5" y="638" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zdW-ea-4N3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ff-ld-Tsq" firstAttribute="centerY" secondItem="yqL-iS-cB7" secondAttribute="centerY" id="0cS-CW-Ics"/>
+                            <constraint firstItem="4ff-ld-Tsq" firstAttribute="centerX" secondItem="yqL-iS-cB7" secondAttribute="centerX" id="8UW-zE-Atz"/>
+                            <constraint firstItem="ejV-rj-7Di" firstAttribute="centerX" secondItem="yqL-iS-cB7" secondAttribute="centerX" id="Lgu-Zv-gqd"/>
+                            <constraint firstItem="c3N-DZ-NYl" firstAttribute="leading" secondItem="yqL-iS-cB7" secondAttribute="leadingMargin" id="Zuy-Yv-iiB"/>
+                            <constraint firstItem="3zy-kD-upH" firstAttribute="top" secondItem="ejV-rj-7Di" secondAttribute="bottom" constant="8" id="Zxl-sv-kgP"/>
+                            <constraint firstItem="c3N-DZ-NYl" firstAttribute="top" secondItem="VBt-jx-3q9" secondAttribute="bottom" id="csq-p1-GqY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c3N-DZ-NYl" secondAttribute="trailing" id="lC5-FJ-4VA"/>
+                            <constraint firstItem="ejV-rj-7Di" firstAttribute="width" secondItem="yqL-iS-cB7" secondAttribute="width" id="yD0-DW-IJd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="4ff-ld-Tsq" id="nTV-fn-iig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkX-D3-loI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="591"/>
         </scene>
         <!--Rotation And Position-->
         <scene sceneID="uw4-cI-Lrm">
@@ -225,4 +330,7 @@
             <point key="canvasLocation" x="2450" y="-11"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="timg.png" width="200" height="200"/>
+    </resources>
 </document>
