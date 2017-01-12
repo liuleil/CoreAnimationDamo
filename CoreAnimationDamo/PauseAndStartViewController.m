@@ -15,17 +15,22 @@
 
 @implementation PauseAndStartViewController
 
+#pragma mark - life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self doAnimation];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
   
 }
+#pragma mark - Custom methods
 -(void)doAnimation{
     [self addAnimation1];
     [self addAnimation2];
     
     
 }
+#pragma mark - addAnimation1
 -(void)addAnimation1{
     CABasicAnimation *basAni = [CABasicAnimation animationWithKeyPath:@"position"];
     basAni.fromValue = [NSValue valueWithCGPoint:CGPointZero];
@@ -43,6 +48,7 @@
     [self.redView.layer addAnimation:basAni forKey:@"base1"];
     
 }
+#pragma mark - addAnimation2
 -(void)addAnimation2{
     CABasicAnimation *basAni2 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     basAni2.fromValue = @0;
@@ -54,7 +60,7 @@
     
 }
 
-
+#pragma mark - Event Response
 int count = 0 ;
 - (IBAction)buttonPress:(UIButton *)sender {
     
@@ -69,5 +75,8 @@ int count = 0 ;
     }
     
 
+}
+- (IBAction)back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

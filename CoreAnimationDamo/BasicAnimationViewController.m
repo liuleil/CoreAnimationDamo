@@ -16,12 +16,19 @@
 
 @implementation BasicAnimationViewController
 
+#pragma mark - life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
  
     self.typeArr = @[@"位移",@"旋转位移",@"暂停/继续控制"];
     self.locationArr = @[@"PositionViewController",@"RotationAndPosition",@"PauseAndStartViewController"];
   
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+       [self.navigationController setNavigationBarHidden:NO animated:YES];
+
 }
 
 #pragma mark - UITableViewDataSource

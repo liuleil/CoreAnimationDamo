@@ -10,5 +10,6 @@
 
 @interface PositionViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *blueView;
+- (IBAction)back:(UIButton *)sender;
 
 @end

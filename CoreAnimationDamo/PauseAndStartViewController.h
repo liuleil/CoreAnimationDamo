@@ -12,4 +12,6 @@
 - (IBAction)buttonPress:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIView *redView;
 
+- (IBAction)back:(UIButton *)sender;
+
 @end

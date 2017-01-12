@@ -21,6 +21,9 @@
 		593BFD031E268446008E2DAB /* PositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593BFD021E268446008E2DAB /* PositionViewController.m */; };
 		593BFD071E269576008E2DAB /* RotationAndPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 593BFD061E269576008E2DAB /* RotationAndPosition.m */; };
 		593BFD0B1E2698EB008E2DAB /* PauseAndStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593BFD0A1E2698EB008E2DAB /* PauseAndStartViewController.m */; };
+		59C59DAD1E2767B8001943DE /* TransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C59DAC1E2767B8001943DE /* TransitionAnimationViewController.m */; };
+		59C59DB01E276E01001943DE /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59C59DAE1E276E01001943DE /* 1.jpg */; };
+		59C59DB11E276E01001943DE /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59C59DAF1E276E01001943DE /* 2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,10 @@
 		593BFD061E269576008E2DAB /* RotationAndPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationAndPosition.m; sourceTree = "<group>"; };
 		593BFD091E2698EB008E2DAB /* PauseAndStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseAndStartViewController.h; sourceTree = "<group>"; };
 		593BFD0A1E2698EB008E2DAB /* PauseAndStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseAndStartViewController.m; sourceTree = "<group>"; };
+		59C59DAB1E2767B8001943DE /* TransitionAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimationViewController.h; sourceTree = "<group>"; };
+		59C59DAC1E2767B8001943DE /* TransitionAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimationViewController.m; sourceTree = "<group>"; };
+		59C59DAE1E276E01001943DE /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		59C59DAF1E276E01001943DE /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +138,7 @@
 				593BFCCD1E266CCB008E2DAB /* AppDelegate.m */,
 				593BFCCF1E266CCB008E2DAB /* ViewController.h */,
 				593BFCD01E266CCB008E2DAB /* ViewController.m */,
+				59C59DAA1E2767A6001943DE /* CATransitionAnimation */,
 				5919F9B11E2752CC00F248DB /*  CAKeyframeAnimation */,
 				593BFCFC1E266CF5008E2DAB /* CABasicAnimation */,
 				593BFCC91E266CCB008E2DAB /* Supporting Files */,
@@ -146,6 +154,8 @@
 				593BFCD71E266CCB008E2DAB /* LaunchScreen.storyboard */,
 				593BFCDA1E266CCB008E2DAB /* Info.plist */,
 				5919F9B71E27560C00F248DB /* timg.png */,
+				59C59DAE1E276E01001943DE /* 1.jpg */,
+				59C59DAF1E276E01001943DE /* 2.jpg */,
 				593BFCCA1E266CCB008E2DAB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -206,6 +216,15 @@
 				593BFD0A1E2698EB008E2DAB /* PauseAndStartViewController.m */,
 			);
 			name = PauseAndStart;
+			sourceTree = "<group>";
+		};
+		59C59DAA1E2767A6001943DE /* CATransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				59C59DAB1E2767B8001943DE /* TransitionAnimationViewController.h */,
+				59C59DAC1E2767B8001943DE /* TransitionAnimationViewController.m */,
+			);
+			name = CATransitionAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,10 +334,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C59DB11E276E01001943DE /* 2.jpg in Resources */,
 				593BFCD91E266CCB008E2DAB /* LaunchScreen.storyboard in Resources */,
 				5919F9B81E27560C00F248DB /* timg.png in Resources */,
 				593BFCD61E266CCB008E2DAB /* Assets.xcassets in Resources */,
 				593BFCD41E266CCB008E2DAB /* Main.storyboard in Resources */,
+				59C59DB01E276E01001943DE /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +366,7 @@
 			files = (
 				593BFD071E269576008E2DAB /* RotationAndPosition.m in Sources */,
 				593BFCD11E266CCB008E2DAB /* ViewController.m in Sources */,
+				59C59DAD1E2767B8001943DE /* TransitionAnimationViewController.m in Sources */,
 				593BFCCE1E266CCB008E2DAB /* AppDelegate.m in Sources */,
 				593BFD031E268446008E2DAB /* PositionViewController.m in Sources */,
 				593BFCFF1E267A95008E2DAB /* BasicAnimationViewController.m in Sources */,

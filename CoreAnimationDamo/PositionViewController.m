@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self doAnimation];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
   
 }
 -(void)doAnimation{
@@ -94,4 +95,7 @@
 
 
 
+- (IBAction)back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

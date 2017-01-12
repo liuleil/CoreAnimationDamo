@@ -13,11 +13,16 @@
 @end
 
 @implementation KeyframeViewController
-
+#pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
+
+
+#pragma mark - Event Response
+
+#pragma mark  move
 
 - (IBAction)move:(UIButton *)sender {
     CAKeyframeAnimation *keyFrame = [CAKeyframeAnimation animationWithKeyPath:@"position"];
@@ -37,7 +42,7 @@
     _animationView.layer.position = [[keyFrame.values lastObject] CGPointValue];
     NSLog(@"%@",NSStringFromCGRect(_animationView.frame));
 }
-
+#pragma mark  shake
 - (IBAction)shake:(UIButton *)sender {
     CAKeyframeAnimation *shake = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
     shake.repeatCount = MAXFLOAT;
@@ -46,6 +51,8 @@
     shake.duration = .05;
     [_animationView.layer addAnimation:shake forKey:@"shake"];
 }
+
+#pragma mark  path
 
 - (IBAction)path:(UIButton *)sender {
     CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
@@ -64,6 +71,8 @@
     
     
 }
+
+#pragma mark  group
 
 - (IBAction)group:(UIButton *)sender {
     ///创建三个动画
@@ -92,6 +101,9 @@
     //添加动画
     [_animationView.layer addAnimation:group forKey:@"group"];
 }
+
+#pragma mark  touch
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     //点击屏幕移除所有动画
     [_animationView.layer removeAllAnimations];

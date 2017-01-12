@@ -15,16 +15,23 @@
 
 @implementation RotationAndPosition
 
+#pragma mark - life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self doAnimation];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
+#pragma mark - Custom methods
+
 -(void)doAnimation{
     [self addAnimation1];
     [self addAnimation2];
 
     
 }
+#pragma mark - addAnimation1
+
 -(void)addAnimation1{
     CABasicAnimation *basAni = [CABasicAnimation animationWithKeyPath:@"position"];
     //CABasicAnimation
@@ -43,6 +50,8 @@
     [self.blueView.layer addAnimation:basAni forKey:@"base1"];
 
 }
+#pragma mark - addAnimation2
+
 -(void)addAnimation2{
     CABasicAnimation *basAni2 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
     basAni2.fromValue = @0;
@@ -54,11 +63,14 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-  
+#pragma mark - Event Response
+
+- (IBAction)back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
 @end
